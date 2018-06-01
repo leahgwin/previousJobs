@@ -135,10 +135,14 @@ console.log(jobArray);
 for (let i = 0; i < jobArray.length; i++) {
     //this line makes an article element represented by 'ar'
     let ar = document.createElement("article");
-    //this line sets the article id to 
+    //this line sets the article id to the value that comes from the array's business line
     ar.setAttribute("id", jobArray[i].business);
+    //then we wanted to add text to the screen, so we created text node and grabbed the array's position for the text
     let p = document.createTextNode(jobArray[i].position);
+    // then appended the text node to the article so it would go on the screen
     ar.appendChild(p);
+    //then we assigned 'sect' to the practice section we query selected
     let sect = document.querySelector('#practice');
+    //and then appended the article to the section we queryselected above
     sect.appendChild(ar);
     }
